@@ -1,0 +1,38 @@
+{% extends 'files/base.html' %}
+
+{% block title %}
+<title>Welcome</title>
+{% endblock %}
+
+{% block content %}
+<br><hr>
+<div class="container">
+    <br>
+    <!-- title row -->
+    <div class="row">
+      <div class="text-dark">
+        <div class="page-dark">
+          <h1>
+            Home page
+          </h1>
+          <p>Welcome to our User Signup & Login page</p>
+        </div>
+      </div>
+    </div>
+    <br>
+    <!-- home page Login & signup -->
+    <div class="row">
+        <form action="{%  url 'log_in:log' %}" method="">
+        {% csrf_token %}
+        <div class="form-row">                     
+          <div class="text-center">
+            <button type="submit" name="Loged" class="btn btn-primary">
+                 Logout
+            </button>
+          </div>
+        </div>      
+        </form>
+    </div>
+</div>    
+<br><hr>
+{% endblock %}

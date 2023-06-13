@@ -1,0 +1,47 @@
+{% extends 'files/base.html' %}
+
+{% block title %}
+<title>Welcome</title>
+{% endblock %}
+
+{% block content %}
+<br><hr>
+<div class="container">
+    <br>
+    <!-- title row -->
+    <div class="row">
+      <div class="text-dark">
+        <div class="page-dark">
+          <h1>
+            Welcome!
+          </h1>
+        </div>
+      </div>
+    </div>
+    <br>
+    <!-- home page Login & signup -->
+    <div class="row">
+        <form action="{%  url 'sign_up:loge_d' %}" method="">
+        {% csrf_token %}
+        <div class="form-row">                     
+          <div class="col-md-6">
+            <button type="submit" name="Loged" class="btn btn-primary">
+              Login
+            </button>
+          </div>
+        </div>      
+        </form>
+        <form action="{% url 'sign_up:singed' %}" method="post">
+        {% csrf_token %}
+        <div class="form-row">                     
+          <div class="col-md-6">
+            <button type="submit" name="signed" class="btn btn-success  mx-2">
+              Signup
+            </button>
+          </div>
+        </div>      
+        </form>
+    </div>
+</div>    
+<br><hr>
+{% endblock %}

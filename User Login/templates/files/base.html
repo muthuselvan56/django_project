@@ -1,0 +1,32 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+    <!-- Required meta tag -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    
+    <!-- bootstrap css link -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+    <!-- our css file link -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+    {% block title %}
+    {% endblock %}
+ </head>
+ <body>
+
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+    <!-- bootstrap js -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <!-- Icons -->
+   <script src="https://kit.fontawesome.com/15974f9624.js" >
+   </script>
+
+     {% block content %}
+     {% endblock %}
+    
+ </body>
+</html>
